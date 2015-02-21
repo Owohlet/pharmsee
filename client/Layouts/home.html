@@ -1,0 +1,39 @@
+<template name="home">
+  <div class="container">
+    <h1>Welcome to your Home</h1>
+    <p>Please complete the details of your pharmacy</p>
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newpharmModal">
+      Complete profile
+    </button>
+    {{> pharmProfile}}
+  </div>
+
+</template>
+
+<template name="pharmProfile">
+ <!-- Modal -->
+ <div class="modal fade" id="newpharmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Fill in your Pharmacy Details</h4>
+      </div>
+      <div class="modal-body">
+        {{#autoForm collection="Pharmacies" id="insertBookForm" type="insert"}}
+        <fieldset>
+          <!-- <legend>Add a Job</legend> -->
+          {{> afQuickField name='name' placeholder='e.g New medic pharmacy'}}
+          {{> afQuickField name='address' placeholder='e.g No 27, aluguntuguntu, East Legon' }}
+          {{> afQuickField name='location' placeholder='e.g Accra, Ghana'}}
+        </fieldset>
+        <button type="submit" class="btn btn-primary"><a href="{{pathFor 'home'}}"></a>Submit</button>
+        {{/autoForm}}
+      </div>
+    </div>
+  </div>
+</div>
+
+</template>

@@ -9,3 +9,8 @@ autopublish
 insecure
 twbs:bootstrap
 iron:router
+useraccounts:bootstrap
+accounts-password
+aldeed:simple-schema
+aldeed:collection2
+aldeed:autoform
