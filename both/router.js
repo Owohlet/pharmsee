@@ -15,7 +15,19 @@ Router.route('/login', function () {      // Route is the path after the url
   name: 'login',                       // name is an arbitrary value. Useful for helpers
 });
 Router.route('/home', function () {      // Route is the path after the url
+  this.render('home');               // 'home' refers to the home template
+
+
+}, {
+  name: 'home',
+});
+
+Router.route('/mainhome', function () {      // Route is the path after the url
   this.render('mainhome');               // 'home' refers to the home template
 }, {
-  name: 'home',                       // name is an arbitrary value. Useful for helpers
+  name: 'mainhome',                       // name is an arbitrary value. Useful for helpers
+  data: function() {
+    return Pharmacies.findOne({userId: Meteor.userId()})
+    
+  }
 });

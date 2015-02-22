@@ -24,6 +24,14 @@ Pharmacies.attachSchema(new SimpleSchema({
     max:20,
     label: "location",
 
+  },
+  userId:{
+    type:String,
+    autoValue: function(){
+      if(this.isInsert){
+        return Meteor.userId()
+      }
+    }
   }
 
 }));

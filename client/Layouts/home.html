@@ -1,14 +1,21 @@
 <template name="home">
   <div class="container">
+  </div>
+  {{#if HasPharm}}
+  <div>
+    {{> mainhome}}
+  </div>
+
+  {{else}}
+  <div>
     <h1>Welcome to your Home</h1>
     <p>Please complete the details of your pharmacy</p>
-  </div>
-  <div>
     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newpharmModal">
       Complete profile
     </button>
     {{> pharmProfile}}
   </div>
+  {{/if}}
 
 </template>
 
@@ -29,7 +36,7 @@
           {{> afQuickField name='address' placeholder='e.g No 27, aluguntuguntu, East Legon' }}
           {{> afQuickField name='location' placeholder='e.g Accra, Ghana'}}
         </fieldset>
-        <button type="submit" class="btn btn-primary"><a href="{{pathFor 'home'}}"></a>Submit</button>
+        <button type="submit" id="pharmSubmit" class="btn btn-primary"><a href="{{pathFor 'home'}}"></a>Submit</button>
         {{/autoForm}}
       </div>
     </div>

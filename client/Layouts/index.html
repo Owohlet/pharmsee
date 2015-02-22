@@ -15,7 +15,11 @@
               <img alt="Brand" src="...">
             </a>
           </div>
-          <button class="button navbar-link navbar-text navbar-right"><a href="{{pathFor 'login'}}">Login</a></button>
+          {{#if currentUser}}
+          <button id="login" class="button navbar-link navbar-text navbar-right"><a href="{{pathFor 'mainhome'}}">Login</a></button>
+          {{else}}
+          <button id="login" class="button navbar-link navbar-text navbar-right"><a href="{{pathFor 'login'}}">Login</a></button>
+          {{/if}}
         </div>
       </nav>
       <div class="Header text-center">
