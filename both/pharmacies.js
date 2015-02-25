@@ -19,6 +19,11 @@ Pharmacies.attachSchema(new SimpleSchema({
 
   },
 
+  drugs: {
+    type: [String],
+    optional: true
+  },
+
   location:{
     type: String,
     max:20,

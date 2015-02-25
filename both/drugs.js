@@ -1,5 +1,6 @@
+Drugs = new Mongo.Collection('drugs');
+
 drugs= [
-[
 "Acetazolamide Injection 500 mg",
 "Acetazolamide Tablet 250 mg",
 "Acetylcysteine Injection 200 mg/mL",
@@ -64,6 +65,3 @@ drugs= [
 "Azithromycin Oral Suspension, 200 mg/5 mL",
 "Azithromycin Oral Suspension, 200 mg/5 mL",
 ]
-
-];
-

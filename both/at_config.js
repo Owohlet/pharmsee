@@ -1,0 +1,5 @@
+AccountsTemplates.configure({
+  onSubmitHook: function() {
+    
+  }
+})

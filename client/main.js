@@ -15,16 +15,18 @@ Template.home.helpers({
 });
 Template.pharmDrugs.helpers({
   drugs: function () {
-    return a = drugs[0]
+    return Drugs.find().fetch()
   }
 });
 var checkedDrugs = [];
 Template.pharmDrugs.events({
-  'change .checked-drugs input': function (event){
-    checkedDrugs.push(event.target.checked);
-  },
-  'checked .drugsel':function(){
-    checkedDrugs.push($(this).val());
+  'change input.drugsel': function (event){
+    var drug = this;
+    var pharmacy = Pharmacies.findOne({userId: Meteor.userId()});
+
+    Pharmacies.update({_id: pharmacy._id}, {$addToSet: {drugs: this._id} });
+    // console
+    // checkedDrugs.push(event.target.checked);
   }
 })
 

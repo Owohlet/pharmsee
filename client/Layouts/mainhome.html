@@ -27,7 +27,7 @@
 
 <template name="pharmDrugs">
  <!-- Modal -->
- <div class="modal fade" id="newpharmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <!-- <div class="modal fade" id="newpharmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -35,23 +35,25 @@
         <h4 class="modal-title" id="myModalLabel">Tick the drugs you have</h4>
       </div>
       <div class="modal-body">
-        {{#each drugs}}
-        
-        <!-- <label class="checked-drugs">
-          <input type="checkbox" checked="{{hideCompleted}}" />
-          Hide Completed Tasks
-        </label> -->
 
-
-
-        <p><input type="checkbox" class="drugsel form-control pull-right" value="{{this}}">{{this}}</p>
-        <hr>
-        {{/each}}
         <button type="submit" id="pharmSubmit" class="btn btn-primary"><a href="{{pathFor 'home'}}"></a>Submit</button>
 
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+{{#each drugs}}
+
+<!-- <label class="checked-drugs">
+  <input type="checkbox" checked="{{hideCompleted}}" />
+  Hide Completed Tasks
+</label> -->
+
+
+
+<p><input type="checkbox" class="drugsel form-control pull-right" value="{{_id}}">{{description}}</p>
+<hr>
+{{/each}}
 
 </template>
