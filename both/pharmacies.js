@@ -1,7 +1,6 @@
 Pharmacies = new Mongo.Collection('pharmacies');
 
 Pharmacies.attachSchema(new SimpleSchema({
-
   name: {
     type: String,
     label: "Pharmacy name",
@@ -21,7 +20,10 @@ Pharmacies.attachSchema(new SimpleSchema({
 
   drugs: {
     type: [String],
-    optional: true
+    optional: true,
+    autoform: {
+      omit: true
+    }
   },
 
   location:{
@@ -36,6 +38,10 @@ Pharmacies.attachSchema(new SimpleSchema({
       if(this.isInsert){
         return Meteor.userId()
       }
+    },
+
+    autoform: {
+      omit: true
     }
   }
 

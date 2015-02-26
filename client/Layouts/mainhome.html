@@ -1,59 +1,37 @@
 <template name="mainhome">
 
-  <div>
-    <h1>{{name}}</h1>
-    <h3>{{address}}</h3>
-    <h3>{{location}}</h3>
-  </div>
-  <hr>
-  <h2>Drug Database</h2>
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newpharmModal">
-    A
-  </button>
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newpharmModal">
-    B
-  </button>
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newpharmModal">
-    C
-  </button>
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newpharmModal">
-    D
-  </button>
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newpharmModal">
-    E
-  </button>
-  {{>pharmDrugs}}
-</template>
-
-<template name="pharmDrugs">
- <!-- Modal -->
- <!-- <div class="modal fade" id="newpharmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Tick the drugs you have</h4>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div>
+          <h1>{{name}}</h1>
+          <h3>{{address}}</h3>
+          <h3>{{location}}</h3>
+        </div>
+        <hr>
+        <h2>Drug Database</h2>
+        {{> drugCategory}}
       </div>
-      <div class="modal-body">
+      <div class="col-md-8">
+        <div class="row">
+          <input type="text" class="form-control" placeholder="Search Drug">
+        </div>
 
-        <button type="submit" id="pharmSubmit" class="btn btn-primary"><a href="{{pathFor 'home'}}"></a>Submit</button>
+        <div class="row">
+          {{#each drugs}}
 
+          <!-- <label class="checked-drugs">
+            <input type="checkbox" checked="{{hideCompleted}}" />
+            Hide Completed Tasks
+          </label> -->
+
+
+
+          <p><input type="checkbox" class="drugsel form-control pull-right" value="{{_id}}">{{description}}</p>
+          <hr>
+          {{/each}}
+        </div>
       </div>
     </div>
   </div>
-</div> -->
-
-{{#each drugs}}
-
-<!-- <label class="checked-drugs">
-  <input type="checkbox" checked="{{hideCompleted}}" />
-  Hide Completed Tasks
-</label> -->
-
-
-
-<p><input type="checkbox" class="drugsel form-control pull-right" value="{{_id}}">{{description}}</p>
-<hr>
-{{/each}}
-
 </template>
