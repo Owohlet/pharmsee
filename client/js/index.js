@@ -6,6 +6,13 @@ Template.index.events({
     Router.go('/results/' + data);
     return false;
   },
+  'click #search-btn': function(e) {
+    e.preventDefault();
+    var data = Drugs.findOne({description: $('#search').val()})._id;
+
+    Router.go('/results/' + data);
+    return false;
+  },
   'keyup input#search': function () {
     AutoCompletion.autocomplete({
       element: 'input#search',       // DOM identifier for the element

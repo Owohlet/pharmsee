@@ -6,7 +6,7 @@
 }
 */
 .indexPicture {
-  background-image: url('/ike2.png');
+  background-image: url('/ike4.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -51,7 +51,7 @@ input[type="radio"]{
   color: white;
   z-index: 10px;
   margin-right: 90px;
-  font-size: 100px;
+  font-size: 40px;
   font-family: webly-sleek
 }
 .jumbotron{
