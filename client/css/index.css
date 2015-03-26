@@ -1,4 +1,19 @@
+.input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  border-radius: 0px
+}
+#search {
+  background: white;
+  color: black;
+  padding: 8px 10px;
+  height:35.5px;
 
+}
+#indexNav{
+    color: transparent;
+}
 #custom-search-input {
     margin:0;
     margin-top: 10px;
@@ -42,4 +57,7 @@
 }
 .glyphicon{
     z-index: 1000px
+}
+.input-group .input-group-btn .btn {
+   border-radius: 0px; 
 }

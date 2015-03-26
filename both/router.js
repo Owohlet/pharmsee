@@ -15,7 +15,8 @@ Router.route('/', function () {      // Route is the path after the url
 });
 
 Router.route('/portal', function() {
-  this.render("login")
+  // this.render("login")
+  this.redirect('/sign-up');
 })
 
 Router.route('/login', function () {      // Route is the path after the url
