@@ -70,7 +70,22 @@ Router.route('/results/:_id', function() {
       }
     }
   }
-})
+});
+
+Router.route('/projects/pharmPage/:_id', function(){
+  this.render('pharmPage');
+}, {
+  name:'pharmPage',
+  
+  data: function(){
+    var _id=this.params._id;
+    return{
+      pharmacies: Pharmacies.findOne(_id),
+      
+    }
+  }
+}
+);
 
 var verifyLogin = function(r, template) {
   if(Meteor.user()) {

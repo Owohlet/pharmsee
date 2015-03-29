@@ -28,6 +28,23 @@ input[type="radio"]{
   font-family: webly-sleek;
   src: url(/weblysleekuil.ttf);
 }
+@font-face {
+  font-family: webly-sleeksb;
+  src: url(/weblysleekuisb.ttf);
+}
+@font-face {
+  font-family: webly-sleeksl;
+  src: url(/weblysleekuisl.ttf);
+}
+.webly{
+  font-family: webly-sleek
+}
+.weblysb{
+  font-family: webly-sleeksb
+}
+.weblysl{
+  font-family: webly-sleeksl
+}
 .button{
   background: #a63d56;
   border: 0px;
