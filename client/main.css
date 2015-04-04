@@ -56,9 +56,11 @@ input[type="radio"]{
   text-decoration: none
 
 }
+
 .navbar-default {
  background-color: transparent;
  border-color: transparent; 
+ /*position: fixed*/
 }
 .contain{
   height: 100%
@@ -142,4 +144,14 @@ input[type="radio"]{
   /*search button styling ends here*/
   h2{
     padding: 0px;
+  }
+  p{
+    /*font-family: Roboto;*/
+  }
+  body{
+    margin-top: 0px
+  }
+  .side-nav {
+    top:60px;
+    background-color: #D7D1D1;
   }

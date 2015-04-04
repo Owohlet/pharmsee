@@ -1,0 +1,21 @@
+<template name="drugDatabase">
+	<div class="container">
+		<h2 class="webly">My database</h2>
+		{{> drugCategory}}
+		<br>
+		<br>
+		<div class="col-md-8">
+			<div class="row">
+				<input type="text" class="form-control" placeholder="Search Drug">
+			</div>
+
+			<div class="row">
+				{{#each drugs}}
+
+				<p><input type="checkbox" class="drugsel form-control pull-right" value="{{_id}}">{{description}}</p>
+				<hr>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</template>
