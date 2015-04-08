@@ -1,0 +1,14 @@
+@media screen and (max-width: 780){
+
+}
+@media screen and (max-width: 480){
+	.Header{
+		margin-top: 15.8565154%
+	}
+	body{
+		width:100%
+	}
+	.serchbox{
+		margin-right: 5em
+	}
+}
