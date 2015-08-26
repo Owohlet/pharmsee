@@ -123,4 +123,10 @@ var verifyLogin = function(r, template) {
     Router.go('/login');
     // r.render(template);
   }
-}
+};
+Router.route('/owners', function() {
+ this.render('owners')
+}, {
+  name: 'owners',
+  // layoutTemplate: 'owners'
+});

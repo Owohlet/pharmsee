@@ -1,0 +1,17 @@
+<template name="owners">
+	<div class="container-fluid">
+		<div class="centered">
+			<p class="webly"> So the scoop is that we will launch soon, PharmSee promises to bring you customers! If you want your pharmacy to be seen by millions of people searching for drugs, leave us your email so we can notify you when we launch. If you want extra features or if there is a problem you encountere running your pharmacy, Let us know in the feedback bit.</p>
+			{{#autoForm collection="Owners" id="insertOwnersForm" type="insert"}}
+			<fieldset>
+				<!-- <legend>Add a Job</legend> -->
+				{{> afQuickField name='email' placeholder='email'}}
+				{{> afQuickField name='address' placeholder="Your Pharmacy's address"}}
+				{{> afQuickField name='feedback' }}
+				<!-- {{> afQuickField name='location' placeholder='e.g Accra, Ghana'}} -->
+			</fieldset>
+			<button type="submit" id="pharmSubmit" class="btn btn-primary"><a href=""></a>Submit</button>
+			{{/autoForm}}
+		</div>
+	</div>
+</template>

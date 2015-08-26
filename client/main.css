@@ -70,7 +70,7 @@ input[type="radio"]{
   color: white;
   z-index: 10px;
   /*margin-right: 90px;*/
-  font-size: 285.7142857%;    /*font-size:40px, context(body):14px*/
+  font-size: 205.7142857%;    /*font-size:40px, context(body):14px*/
   font-family: webly-sleek
 }
 .jumbotron{
@@ -146,6 +146,8 @@ p{
 body{
   margin-top: 0px;
   height:100%;
+  background-color: #fff;
+  font-size: 16px
 }
 .side-nav {
   top:60px;
@@ -154,8 +156,10 @@ body{
 html{
   height: 100%
 }
-
-
+.own-pharm{
+  border: solid 2px #009688;
+  background-color: transparent !important;  
+}
 
 
 
@@ -173,22 +177,38 @@ html{
   body{
     width:100%;
     height: 100%;
+
   }
   html{
     width:100%;
     height: 100%;
 
   }
+  .navbar-header{
+    text-align: center;
+  }
+  .navbar-brand{
+    text-align: center;
+    margin-left: 70px;
+  }
+  .own-pharm{
+    text-align: center;
+    margin-right: 20px
+  }
   .searchbox{
     /*margin-right: 5em*/
     width:100%;
-    margin-top:100px;
-
+    margin-top: 50px;
+  }
+  .centered{
+    position:absolute;
+    margin-top: 120px;
   }
   #index-header{
-    /*font-size: 285.7142857%;*/
+    /*font-size: 50.7142857%;*/
     /*font-size: 614.2857143%;*/
     /*padding:3px;*/
+    font-size: 2em;
   }
   .small-search{
     text-align: center;

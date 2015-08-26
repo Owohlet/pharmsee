@@ -15,18 +15,18 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            <!-- <img alt="Brand" src="..."> -->
+            <img style="width:135px" class="logo" alt="Pharmsee" src="/pharmsee-logo-final-white.png">
 
           </a>
         </div>
-        <button href="{{pathFor 'portal'}}" class="btn btn-primary pull-right">I own a pharmacy</button>
+        <a href="{{pathFor 'owners' }}"><button class="btn btn-primary pull-right own-pharm">I own a pharmacy</button></a>
       </div>
     </nav>
 
     <div class="Header text-center">
-      <a class="text-center"> [This site is still in development]</a>
+      <!-- <a class="text-center"> [This site is still in development]</a> -->
 
-      <h1 id="index-header" >Find drugs easily with PharmSee!</h1>
+      <h1 id="index-header" >Find the pharmacies who have the drugs you are looking for!</h1>
 
       <div class="searchbox container-fluid">
         <div class="row">
@@ -34,7 +34,7 @@
             <!-- <div class="text-center"> -->
             <form class="search-form">
               <div class="input-group custom-search-form">
-                <input type="text" class="form-control" id="search" placeholder="Search a drug">
+                <input type="text" class="form-control" id="search" placeholder="Search for a drug, type and we complete it for you">
                 <span class="input-group-btn">
                   <button class="btn btn-danger" id="search-btn" type="button">
                     <span class="glyphicon glyphicon-search"></span>
@@ -42,15 +42,16 @@
                 </span>
               </div>
             </form>
-
-            <!-- </div> -->
           </div>
         </div>
       </div>
-      <!-- </div> -->
     </div>
+  </div>
+  <div class="footer">
+    <a style="color:white">&copy; Pharmsee 2015</a>
+  </div>
 
-  </template>
+</template>
 
 
 

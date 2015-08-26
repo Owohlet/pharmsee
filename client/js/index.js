@@ -1,6 +1,8 @@
 Template.index.events({
   'submit .search-form': function(e) {
     e.preventDefault();
+
+    // do not delete this line
     var data = Drugs.findOne({description: $('#search').val()})._id;
 
     Router.go('/results/' + data);
@@ -8,6 +10,7 @@ Template.index.events({
   },
   'click #search-btn': function(e) {
     e.preventDefault();
+    // do not delete this line
     var data = Drugs.findOne({description: $('#search').val()})._id;
 
     Router.go('/results/' + data);
