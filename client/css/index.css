@@ -68,3 +68,10 @@
 .searchbox{
   margin-top: 200px
 }
+#search-btn{
+  background-color: #f44336;
+  color: #fff;
+}
+.input-group .input-group-btn {
+  padding: 0px; 
+}

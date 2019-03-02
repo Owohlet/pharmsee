@@ -167,6 +167,7 @@ html{
   border: solid 2px #009688;
   background-color: transparent !important;  
   margin-top: 26px;
+  color: #fff !important;
 }
 
 
@@ -197,11 +198,11 @@ html{
   }
   .navbar-brand{
     text-align: center;
-    margin-left: 70px;
+    /*margin-left: 70px;*/
   }
   .own-pharm{
     text-align: center;
-    margin-right: 20px
+    /*margin-right: 20px*/
   }
   .searchbox{
     /*margin-right: 5em*/
@@ -217,6 +218,7 @@ html{
     /*font-size: 614.2857143%;*/
     /*padding:3px;*/
     font-size: 2em;
+    margin-top: 100px;
   }
   .small-search{
     text-align: center;
